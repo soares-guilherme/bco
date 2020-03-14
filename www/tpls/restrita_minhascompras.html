@@ -1,0 +1,58 @@
+<div class="BoxRow BoxRestrita">
+    <h1 class="title">
+        Meus Aportes
+    </h1>
+    <div class="text">
+		<!-- START BLOCK : lista_compras -->
+			<table width="100%" border="0" cellpadding="10" cellspacing="0" class="TabelaArquivos" align="center">
+				<tr class="head">
+					<td width="1%">C&Oacute;DIGO</td>
+					<td>DESCRI&Ccedil;&Atilde;O</td>
+					<td>SITUA&Ccedil;&Atilde;O</td>
+					<td>CRIA&Ccedil;&Atilde;O</td>
+					<td>ATUALIZA&Ccedil;&Atilde;O</td>
+					<td></td>
+				</tr>
+				<!-- START BLOCK : compra -->
+				<tr>
+					<td>
+                        <span class="label">C&Oacute;DIGO</span>
+                        {id}
+                    </td>
+					<td>
+                        <span class="label CinzaEsc">DESCRI&Ccedil;&Atilde;O</span>
+                        {descricao}
+                    </td>
+					<td>
+                        <span class="label CinzaEsc">SITUA&Ccedil;&Atilde;O</span>
+                        {situacao}
+                    </td>
+					<td>
+                        <span class="label CinzaEsc">CRIA&Ccedil;&Atilde;O</span>
+                        {criacao}
+                    </td>
+					<td>
+                        <span class="label CinzaEsc">ATUALIZA&Ccedil;&Atilde;O</span>
+                        {atualizacao}
+                    </td>
+					<td>
+                        <span class="label CinzaEsc"></span>
+					    <!-- START BLOCK : comprovante -->
+					    <a href="{link}">Comprovante</a>
+					    <!-- END BLOCK : comprovante -->
+					</td>
+				</tr>
+				<!-- END BLOCK : compra -->
+			</table>
+		<!-- END BLOCK : lista_compras -->
+		<!-- START BLOCK : nenhuma_compra -->
+		<br />
+		<p align="center">
+			Voc&ecirc; n&atilde;o realizou nenhuma compra, portanto n&atilde;o h&aacute; compras para exibir.
+		</p>
+		<p align="center">
+			<span class="CinzaEsc"><a href="{link_restrita}">Clique aqui</a></span> para voltar.
+		</p>
+		<!-- END BLOCK : nenhuma_compra -->
+	</div>
+</div>

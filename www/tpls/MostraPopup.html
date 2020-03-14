@@ -1,0 +1,26 @@
+<script type="text/javascript">
+fixcss_h_ray['MostraPopup'] = 'Container';
+
+$(document).ready(function(){
+    $('#MostraPopup .BackStage, #MostraPopup .FecharPopup').click(function(){
+        ajaxGet(url_ajax + 'denyShowPopup', function () {
+            if(ajaxLastResult.substr(0,2) == 'OK') {
+                return true;
+            }
+        });
+        $('#MostraPopup .PopupContent').html('');
+        $('#MostraPopup').hide();
+    });
+});
+</script>
+
+<div id="MostraPopup" class="MostraPopup">
+    <div class="BackStage">&nbsp;</div>
+    <div class="Popup" align="center">
+        <div class="PopupContent BoxRow" align="center">
+            <a class="FecharPopup FechaPopUpContato">x</a>
+            <i class="text">Nossos produtos são de uso exclusivo profissional, portanto é destinado ao profissional cabeleireiro.<br>
+                Consumidores finais devem se dirigir a um salão de beleza.</i>
+        </div>
+    </div>
+</div>

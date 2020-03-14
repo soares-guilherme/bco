@@ -1,0 +1,34 @@
+
+/*.mt-6pz{*/
+/*    margin-top: 4rem !important;}*/
+
+/*.mt-7pz{*/
+/*    margin-top: 5rem !important;}*/
+
+/*.mt-8pz{*/
+/*    margin-top: 6rem !important;}*/
+/*.mt-9pz{*/
+/*    margin-top: 7rem !important;}*/
+/*.mt-10pz{*/
+/*    margin-top: 8rem !important;}*/
+
+
+.ftco-navbar-light.bg-white{
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
+
+
+@media only screen and (max-width: 600px) {
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 998px)  {
+
+}
+
+@media only screen and (min-width: 999px) {
+    .mt-10pz{
+        margin-top: 8rem !important;}
+}
+
+

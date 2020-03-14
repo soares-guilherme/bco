@@ -1,0 +1,18 @@
+Theme welfare
+Arquivos que não estão sendo utilizados
+_____________________________________________________________________/=/____________________________________________________________________________________
+                                                                *******JS*******
+/www/js/ todos JS da pasta não estão sendo utilizados -  menos os da pasta file_pz_theme
+EXEPTIONS
+_____________________________________________________________________/=/____________________________________________________________________________________
+                                                                *******CSS*******
+/www/tpls/css todos CSS da pasta NÃO estão sendo utilizados -  menos os da pasta file_pz_theme e fonts
+EXEPTIONS
+/www/tpls/css/css.css (sendo utilizado no projeto)
+Obs: este arquivo originalmente com os padrões pz está salvo como css-old.css somente como bakcup em /www/tpls/css/css-old.css
+
+/www/tpls/css/var.css (sendo utilizado no projeto)
+_____________________________________________________________________/=/____________________________________________________________________________________
+                                                               *******FONTS*******
+/www/tpls/fonts arquivos soltos dentro desta pasta não estão sendo utilizados -  menos os das pastas flaticon, icomoon, ionicons, open-ionic
+EXEPTIONS

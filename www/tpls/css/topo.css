@@ -1,0 +1,147 @@
+.BgTopo {
+    left: 0;
+    top: 0;
+    z-index: 999;
+    position: fixed;
+    
+    background-color: #F1F1F1;
+    box-shadow: 0px -5px 15px 0 #000;
+}
+.BgTopoFake {    
+    height: 8rem;
+    background-color: #000;
+}
+
+.BoxTopo {
+	display: flex;
+	align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+.Logo {
+	max-width: 75%;
+    float: left;
+    margin-top: 0;
+    overflow: hidden;
+    position: relative;
+}
+.Logo img {
+    max-width: 100%;
+    max-height: 100%;
+	box-sizing: border-box;
+}
+
+.ContatosTopo {
+	 max-width: 50vw;
+	 background-color: var(--main-bg-color);
+	 color: #F1F1F1;
+	 position: absolute;
+	 top: 0;
+	 right: 0;
+	 padding: 0.3rem 1rem;
+}
+.ContatosTopo .item {
+	 float: left;
+	 margin: 0.25rem;
+	 clear: both;
+}
+
+.Menu {
+	position: absolute;
+    right: 0;
+}
+.ItemMenu {
+    color: var(--main-bg-color);
+    display: inline-block;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-left: 0px;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.ItemMenu i {
+	font-size:150%;
+}
+.ItemMenu:hover {
+    background-color: var(--main-bg-color);
+    color: #EEE;
+}
+
+.MenuMobile {
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    overflow: visible;
+    z-index: 999;
+    width: 100%;
+    height: 0;
+}
+.MenuCSS {
+    float: right;
+    height: 35px;
+    top: 22px;
+    right: 22px;
+    overflow: visible;
+    position: absolute;
+    z-index: 1000;
+}
+.MenuCSS b {  
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    display: block;
+    background-color: var(--main-bg-color);
+    margin-bottom: 6px;
+}
+.SubMenuMobile {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 998;
+    background-color: var(--main-bg-color);
+}
+.SubMenuMobile .ItemMenu {
+    background-color: var(--main-bg-color);
+    border-bottom: 1px solid #333; 
+    box-sizing: border-box;
+    color: var(--main-fg-color);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: left;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.SubMenuMobile .ItemMenu:last-child {
+    border: 0;
+}
+.SubMenuMobile .ItemMenu:hover {
+    background-color: var(--main-fg-color);
+    color: var(--main-bg-color);
+}
+.SubMenuMobile .ItemSubMenu {
+    background-color: #F79622;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 15px;
+    text-align: left;
+    text-decoration: none;
+    padding: 20px 40px 20px 60px;
+    display: block;
+    width: 100%;
+}
+.SubMenuMobile .ItemSubMenu:hover {
+    background-color: #333;
+    color: #F79622;
+}
+
+@media only screen and (max-width: 1600px) {
+	.Menu {
+		margin-top: 3rem;
+	}
+}

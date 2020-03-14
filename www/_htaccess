@@ -1,0 +1,67 @@
+RewriteEngine On
+
+# Erros
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteRule ^(ErroFatal) ErroFatal.php [L]
+
+# Files
+RewriteRule ^(z1img)\/(.*)$ main.php?secao=$1&img=$2 [L,QSA]
+RewriteRule ^(z1files)\/(.*)$ main.php?secao=$1&path=$2 [L,QSA]
+
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteRule ^.*files\/(.*) /z1files/$1 [R=301,L]
+
+# Pastas
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteRule ^.*suporte\/(.*) /suporte/$1 [R=301,L]
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteRule ^.*js\/(.*) /js/$1 [R=301,L]
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteCond	   %{REQUEST_URI}  !^/tpls.*
+RewriteRule ^.*img\/(.*) /tpls/img/$1 [R=301,L]
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteCond	   %{REQUEST_URI}  !^/tpls.*
+RewriteRule ^.*css\/(.*) /tpls/css/$1 [R=301,L]
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteCond	   %{REQUEST_URI}  !^/tpls.*
+RewriteRule ^.*swf\/(.*) /tpls/swf/$1 [R=301,L]
+
+RewriteRule ^(z1.js)$ /js/z1.js.php [L]
+RewriteRule ^(z1.css)$ /tpls/css/z1.css.php [L]
+
+# Secoes
+RewriteRule ^([Aa]rea[Rr]estrita)\/([a-z,A-Z]+)\/*(.*)$ main.php?secao=$1&action=$2&$3 [L]
+RewriteRule ^([Cc]omprar)\/([0-9]+)\/*([0-9]*)\/*(.*)$ main.php?secao=$1&pid=$2&qnt=$3&$4 [L,QSA]
+RewriteRule ^([Hh]ome)\/([a-z,A-Z]+)\/*(.*)$ main.php?secao=$1 [L]
+RewriteRule ^([Ii]nicial)\/([a-z,A-Z]+)\/*(.*)$ main.php?secao=$1 [L]
+RewriteRule ^([Aa]jax)\/([a-z,A-Z]+)\/*(.*)$ main.php?do=$2&$3 [L]  
+RewriteRule ^([Mm]ostra[Ii]magem)\/([^\/,^?]+)\/*(.*)$ main.php?secao=$1&uri=$2&$3 [L]
+RewriteRule ^([Mm]ostra[Cc]ontato)\/*(.*)$ main.php?secao=$1&$2 [L]
+RewriteRule ^([Mm]ostra[Ll]ocal)\/([a-z,A-Z]+)\/*(.*)$ main.php?secao=$1&id=$2&$3 [L]
+RewriteRule ^([Mm]ostra[Mm]ateria)\/([0-9]+)\/*(.*)$ main.php?secao=$1&mid=$2&$3 [L]
+RewriteRule ^([Mm]ostra[Vv]ideo)\/([0-9]+)\/*(.*)$ main.php?secao=$1&vid=$2&$3 [L]
+RewriteRule ^([Ii]moveis)\/*(.*)\/*(.*)$ main.php?secao=$1&$2$3 [QSA,L]
+RewriteRule ^([Ii]movel)\/([0-9]+)\/*(.*)$ main.php?secao=$1&iid=$2&$3 [L]
+RewriteRule ^([Pp]roduto)\/([0-9]+)\/*([^\/,^?]*)\/*([0-9]*)\/*(.*)$ main.php?secao=$1&pid=$2&T=$4&$5 [L]
+RewriteRule ^([Pp]rodutos)\/([0-9]+)\/*([^\/,^?]*)\/*([0-9]*)\/*(.*)$ main.php?secao=$1&sid=$2&T=$4&$5 [L]
+#RewriteRule ^([Pp]rodutos)\/*(.*)\/*(.*)$ main.php?secao=$1&$2$3 [QSA,L]
+RewriteRule ^([Cc]aptcha)\/([^\/,^?]+)\/*(.*)$ main.php?secao=$1&salt=$2&action=$3 [L]
+RewriteRule ^([Ss]ecao)\/([0-9]+)\/*([^\/,^?]*)\/*([0-9]*)\/*(.*)$ main.php?secao=$1&sid=$2&T=$4&$5 [L]
+RewriteRule ^([Pp]agina)\/([0-9]+)\/*([^\/,^?]*)\/*(.*)$ main.php?secao=$1&mid=$2&$4 [L]
+RewriteRule ^([Ff]ile)\/*(.*)$ main.php?secao=$1&file=$2 [L]
+RewriteRule ^([Oo]rcamento)\/([0-9]+)\/([a-z,A-Z]+)\/*(.*)$ main.php?secao=$1&pid=$2&nome=$3&$4 [L]
+
+# Paginas
+RewriteCond    %{REQUEST_FILENAME}  !-d
+RewriteCond    %{REQUEST_FILENAME}  !-f
+RewriteRule ^([a-z,A-Z,0-9]+)\/*(.*)$ main.php?secao=$1&$2 [L]
+
+AddType  application/octet-stream  .z01 .z02 .z03 .z04 .z05 .z06 .z07 .z08 .z09 .z10
+AddType  application/octet-stream  .r01 .r02 .r03 .r04 .r05 .r06 .r07 .r08 .r09 .r10

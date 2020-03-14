@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0px;
+	padding:0px;
+}
+p { margin:0px; }
+#Container {
+	max-width: 800px;
+}
+.BgTopo,
+.BgMenu,
+.BgRodape,
+.noprint,
+iframe {
+	display: none !important;
+}
+.title {
+	font-size: 40px !important;
+}
+.subtitle {
+	font-size: 30px !important;
+}
+.BoxRestrita {
+	margin-top: 20px !important;
+}
+.PrintOnly {
+	display: inline-block !important;
+}

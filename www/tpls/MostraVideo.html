@@ -1,0 +1,31 @@
+
+$(document).keyup(function(el) {
+	if (el.keyCode == 27) {
+		MostraGaleria.Close();
+	}
+	if (el.keyCode == 37) {
+		if($('#Anterior').attr('ref') != 'javascript:void(null);') {
+			MostraGaleria.Open( $('#Anterior').attr('ref') );
+		}
+	}
+	if (el.keyCode == 39) {
+		if($('#Proximo').attr('ref') != 'javascript:void(null);') {
+			MostraGaleria.Open( $('#Proximo').attr('ref') );
+		}
+	}
+});
+$(".MostraGaleriaFundo").click( function(){
+	MostraGaleria.Close()
+});
+
+<!-- ENDJS -->
+
+<div class="BoxRow PopUpGaleriaTopo">
+	<span align="center" class="text">{descricao}</span>
+	<a class="FechaPopUpGaleria" onclick="MostraGaleria.Close();">x</a>
+</div>
+<div class="BoxRow PopUpGaleria ImgOnly" align="center">
+	<div style="max-width: 100%; height: 99%;" align="center">
+		<iframe width="100%" height="100%" src="//www.youtube.com/embed/{vid}" frameborder="0" allowfullscreen></iframe>
+	</div>
+</div>

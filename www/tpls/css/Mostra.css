@@ -1,0 +1,173 @@
+.MostraGaleria {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.MostraGaleria img {
+	/*max-height: 80%;*/
+	opacity: 1.0 !important;
+	-moz-opacity: 1.0 !important;
+	-webkit-opacity: 1.0 !important;
+	filter: alpha(opacity=100) !important;
+}
+.MostraGaleriaFundo {
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	z-index: 9998;
+	position: absolute;
+	top:0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+.MostraGaleriaHolder {
+	/*z-index: 1001;*/
+	/*width:1300px;*/
+	overflow:hidden;
+	clear: both;
+}
+.white-shadow {
+	box-shadow: 0px 0px 10px #666666;
+	-moz-box-shadow: 0px 0px 10px #666666;
+	-webkit-box-shadow: 0px 0px 10px #666666;
+}
+.MostraGaleriaInner {
+	margin-top: 50px;
+	overflow: hidden;
+}
+.MostraGaleriaLoading {
+	height: 180px;
+	left: 50%;
+	margin-left: -80px;
+	overflow: hidden;
+	position: fixed;
+	top: 120%;
+	width: 160px;
+	z-index: 9999;
+}
+.MostraGaleriaArea {
+    bottom: 0vh;
+    height: 95vh;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 5vh;
+    width: 100%;
+    z-index: 9999;
+}
+a.MostraFechar {
+    background-image: url(/img/fechar.png);
+    background-position: center 3px;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 40px;
+    margin-right: 30px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+a:hover.MostraFechar {
+	background-position: bottom;
+}
+a.MostraFecharVideos {
+	display: block;
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	position:absolute;
+	right: 20px;
+	top: 10px;
+	background-image: url(/img/BtFecharMostra.png);
+	background-repeat: no-repeat;
+}
+.EnvolveRelative {
+	/*
+	position: relative;
+	width: 1300px;
+	position: fixed;*/
+}
+/* mostra imagem */
+.MostraImagem {
+	/*padding: 40px;*/
+	overflow:hidden;
+	display: inline-block;
+}
+.MostraImagemHolder {
+	/*margin: 50px 0 0;
+	display: inline-block;*/
+}
+.MostraImagemHolder {
+	float: left;
+}
+.MostraBoxImg {
+    border: 6px solid #039ce0;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    background-color: #FFF;
+    padding: 0px;
+	max-width: 1200px;
+	display: inline-block;
+}
+.MostraFillBoxImg {
+	background-color: #000;
+	/*display: inline-block;*/
+	max-width: 1200px;
+}
+.MostraFillBoxImg img {
+	display: block;
+}
+.MostraPagDir {
+	position:absolute;
+	right: 85px;
+	top: 55%;
+}
+.MostraPagEsq {
+	position:absolute;
+	left: 85px;
+	top: 55%;
+}
+.MostraTotalPaginas {
+	position: absolute;
+	right: 35px;
+	top: 46px;
+	width: 42px;
+}
+.MostraDescricao {
+	margin:10px 15px 0 15px;
+}
+.TextoCarregando {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+	font-family: Arial;
+}
+.TextoItemGaleria {
+    background-color: #eee;
+    color: #666;
+    display: block;
+    font-family: Arial;
+    font-size: 16px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 800px)  {
+	.BgSobreADms {
+		background: repeating-linear-gradient(
+			0deg,
+			#2FCEFE,
+			#2FCEFE 50%,
+			#FFF 50%,
+			#FFF 100%
+		);
+	}
+}

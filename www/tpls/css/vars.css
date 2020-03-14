@@ -1,0 +1,13 @@
+:root {
+  --main-bg-color: #BBAB5D;
+  --main-fg-color: #EFD196;
+}
+
+/*exemplo de aplicação*/
+/*.classe{*/
+/*  background-color: var(--main-bg-color);*/
+/*}*/
+
+@media only screen and (max-width: 998px) {
+
+}

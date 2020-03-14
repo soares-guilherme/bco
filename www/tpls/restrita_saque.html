@@ -1,0 +1,57 @@
+<!-- START BLOCK : registrasaque -->
+	<script type="text/javascript">
+	{javascript}
+	</script>
+	<a href="{link_restrita}" style="float: right;clear:both; margin-top:2rem;">&larr; Voltar</a>
+	<h1>Novo saque</h1>
+	{form_registrasaque}
+	<table border="0" cellspacing="8" cellpadding="0" class="CinzaEsc" align="center" style="text-align:left;">
+		<tr>
+			<td colspan="2">Para realizar um novo saque basta você informar abaixo o <i>Valor em U$ Dólar</i> desejado e clicar em <i>Registrar</i>. Seu saque estará disponível na sua conta bancária ou carteira bitcoin de acordo com a <i>Forma de saque</i> escolhida em até 48 horas.</td>
+		</tr>
+		<tr>
+			<td align="center">Dólar Comercial (BRL/USD): {dolar_quotation}</td>
+			<td align="center">Bitcoin (BTC/USD): {btc_quotation}</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h2>Saque</h2></td>
+		</tr>
+		<tr>
+			<td>Disponível para saque:</td>
+			<td>$ {disponivel} (USD)</td>
+		</tr>
+		<tr>
+			<td>Valor em $ Dólar(USD):</td>
+			<td>{saque}</td>
+		</tr>
+		<tr>
+			<td>Forma de saque:</td>
+			<td>{tipo}</td>
+		</tr>
+		<tr>
+			<td>Taxa Administrativa:</td>
+			<td>{taxa}</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h2>Valor estimado do saque</h2></td>
+		</tr>
+		<tr>
+			<td align="right">R$ Real(BRL):</td>
+			<td>{valor}</td>
+		</tr>
+		<tr>
+			<td align="right">Bitcoin:</td>
+			<td>{valor_btc}</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">{submit}</td>
+		</tr>
+	</table>
+	<br />
+	{form_close}
+	<script type="text/javascript">
+	$(document).ready(function(){
+	    $.maskAll();
+	});
+	</script>
+<!-- END BLOCK : registrasaque -->

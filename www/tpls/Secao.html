@@ -1,0 +1,38 @@
+<!-- START BLOCK : hide -->
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/font.css" rel="stylesheet" type="text/css" />
+<!-- END BLOCK : hide -->
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+<div class="BoxRow BoxDicas">
+	<div class="Espacamento">
+        <br clear="all">
+        <a href="{link_voltar}" class="BtClose"><b>&larr;</b></a>
+        <br clear="all">
+	    <div class="Cabecalho">
+            <p class="title" align="center">{secao}</p>
+        </div>
+        <br clear="all" />
+        <br>
+        <div>
+            <!-- START BLOCK : item -->
+            <div class="BoxDica">
+                <div class="BoxGrid-2 BgSetaDica">
+                    <div class="ImgOnly">
+                        <a href="{link}"><img src="{img}" /></a>
+                    </div>
+                    <div class="SetaDica">&nbsp;</div>
+                </div>
+                <div class="BoxGrid-2 DicaHomeDetalhes">
+                    <p class="TituloDica">{titulo}</p>
+                    <div class="text">{resumo}</div>
+                    <p align="left"><a class="Bt BtDicas" href="{link}">LEIA MAIS</a></p>
+                </div>
+            </div>
+            <!-- END BLOCK : item -->
+        </div>
+        <!-- INCLUDE BLOCK : ./tpls/paginador.html -->
+        <br clear="all">
+        <br clear="all">
+    </div>
+</div>
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->

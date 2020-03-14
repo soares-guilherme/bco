@@ -1,0 +1,900 @@
+html {
+    font-size: 10px;
+}
+body {
+    font-family: Sans-serif, Tahoma, Arial;
+    font-size: 1.8rem;
+    background-color: var(--main-bg-color);
+    color: #666;
+}
+/* TEXTOS */
+.title {
+    color: var(--main-bg-color);
+    margin: 0;
+	text-align: center;
+}
+.title a {
+    color: #000;
+    text-decoration: none;
+}
+.title a:hover {
+    text-decoration: underline;
+}
+.sectionTitle {
+	font-family: Arial;
+    font-weight: normal;
+    font-size: 5rem;
+	padding: 0.6rem 6rem;
+	border-bottom: 5px solid;
+	display: inline-block;
+	margin: 2rem 0 3rem 0;
+}
+.subtitle {
+    color: #444;
+    font-size: 2.2rem;
+    font-weight: normal;
+    margin: 22px 0;
+}
+.subtitle a {
+    color: #212121;
+    text-decoration: none;
+}
+.subtitle a:hover {
+    text-decoration: underline;
+}
+.caption {
+    color: #333;
+    font-size: 1.6rem;
+}
+.caption a {
+    color: #333;
+    text-decoration: none;
+}
+.caption a:hover {
+    color: #000;
+}
+.prices {
+    color: #008000;
+    font-size: 30px;
+}
+.prices a {
+    color: #008000;
+    text-decoration: none;
+}
+.prices a:hover {
+    color: #000;
+}
+.text {
+    color: #000;
+    font-size: 20px;
+    line-height: 28px;
+}
+.text a {
+    color: #333;
+    text-decoration: underline;
+}
+.text a:hover {
+    color: #000;
+}
+.microtext {
+    color: #333;
+    font-size: 10px;
+    line-height: 13px;
+}
+.microtext a {
+    color: #333;
+    text-decoration: none;
+}
+.microtext a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.slogan {
+	font-family: BatmanForeverAlternate, Arial;
+    font-weight: normal;
+    font-size: 5rem;
+	margin: 1rem;
+	text-align: center;
+}
+.acTitle {
+	text-shadow: 2px 2px 2px #000;
+	font-size:5rem;
+	text-align: right;
+	font-family: Arial;
+	font-weight: normal;
+	margin-right:1em;
+}
+/* TEXTOS */
+/* FORMULARIOS */
+
+    /* iOS fix */
+    textarea,
+    input.text,
+    input[type="text"],
+    input[type="button"],
+    /*input[type="submit"],*/
+    .input-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 0;
+    }
+
+label {
+    cursor: pointer;
+}
+.fmInput,
+.fmInput_onerror {
+    background-color: rgba(4,4,40,0.4);
+    border: 1px solid #FFF;
+    font-family: sans-serif, arial;
+    box-sizing: border-box;
+    color: #FFF;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 18px 10px 18px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+.fmInput_onerror {
+    color: #DD0000;
+    border-color: #DD0000;
+}
+.fmInput::-webkit-input-placeholder,
+.fmInput_onerror::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #FFF;
+  opacity:  1;
+}
+.fmInput::-moz-placeholder,
+.fmInput_onerror::-moz-placeholder { /* Firefox 19+ */
+  color: #FFF;
+  opacity:  1;
+}
+.fmInput:-ms-input-placeholder,
+.fmInput_onerror:-ms-input-placeholder { /* IE 10+ */
+  color: #FFF;
+  opacity:  1;
+}
+.fmInput:-moz-placeholder,
+.fmInput_onerror:-moz-placeholder { /* Firefox 18- */
+  color: #FFF;
+  opacity:  1;
+}
+.fmInput_onerror:-moz-placeholder,
+.fmInput_onerror:-ms-input-placeholder,
+.fmInput_onerror::-moz-placeholder,
+.fmInput_onerror::-webkit-input-placeholder {
+    color: #DD0000;
+}
+.button,
+a.button,
+.text a.button,
+.fmSubmit {
+    background-color: var(--main-bg-color);
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 20px;
+    min-width: 80px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 40px;
+    font-family: sans-serif, arial;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.button:hover,
+a.button:hover,
+.text a.button:hover,
+.fmSubmit:hover {
+    opacity: 0.8;
+}
+/* FORMULARIOS */
+/* POPUP */
+.MostraPopup {
+    left: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+}
+.BackStage {
+    background-color: #000;
+    height: 100%;
+    opacity: 0.5;
+    position: absolute;
+    width: 100%;
+    z-index: 2001;
+}
+.Popup {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: fixed;
+    top: 100px;
+    max-width: 1000px;
+    z-index: 2002;
+}
+.PopupContent {
+    background-color: #2C308A;
+    max-width: 1000px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+    margin-top: 30vh;
+    position: relative;
+    text-align: center;
+}
+.PopupContent .text {
+    color: #FFF;
+}
+.PopupTexto {
+    background-color: #2C308A;
+    padding: 60px;
+    text-align: center;
+    color:#FFF;
+    font-size: 40px;
+}
+.PopUpGaleriaTopo {
+    background-color: #DD0000;
+    line-height: 70px;
+}
+.PopUpGaleriaTopo .text {
+    color: #FFF;
+}
+.PopUpGaleria {
+    background-color: #333;
+    box-sizing: border-box;
+    left: 0;
+    margin: 0 auto;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 72px;
+    height: 75vh;
+}
+.PopUpGaleria img {
+    max-width: 100%;
+}
+.PopUpGaleriaTotal {
+    color: #FFF;
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 5%;
+    vertical-align: middle;
+}
+.PopUpGaleriaEsq,
+.PopUpGaleriaDir {
+    position: absolute;
+    top: 45%;
+    background-color: #DD0000;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    height: 76px;
+    width: 76px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 38px;
+    text-align: center;
+    line-height: 76px;
+    vertical-align: middle;
+}
+.PopUpGaleriaEsq img,
+.PopUpGaleriaDir img {
+    vertical-align: middle;
+}
+.PopUpGaleriaEsq {
+    left: 2%;
+}
+.PopUpGaleriaDir {
+    right: 2%;
+}
+.FechaPopUpGaleria {
+    color: #fff;
+    cursor: pointer;
+    font-size: 50px;
+    float: right;
+    font-family: sans-serif, arial;
+    height: 70px;
+    line-height: 60px;
+    right: 2px;
+    text-align: center;
+    text-decoration: none;
+    top: 2px;
+    width: 70px;
+    z-index: 3;
+}
+.FechaPopUpGaleria:hover {
+    color: #AAA;
+}
+.PopUpContato {
+    margin-top: 25%;
+    padding: 30px 40px;
+    background-color: #F79622;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+}
+.PopUpContato .text {
+    color: #3d3d3d;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+.FechaPopUpContato {
+    cursor: pointer;
+    color: #3d3d3d;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+/* POPUP */
+/* PAGINA */
+.BgPagina {
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+}
+.BoxPagina {
+    padding: 40px 10px 60px 10px;
+}
+.ContentMostraPagina img {
+    height: auto !important;
+    width: auto !important;
+    max-height: 157px;
+    max-width: 280px;
+    vertical-align: middle;
+}
+/* PAGINA */
+/* OUTROS */
+.Loadeando {
+    box-sizing:border-box;
+    padding: 30px;
+    text-align: center;
+    display: none;
+}
+.windows8 .wBall .wInnerBall {
+    background-color: #2C308A;
+}
+.PluGzOne {
+    display: block;
+    height: 50px;
+    margin-top: -50px;
+    text-align: right;
+}
+.PluGzOne_print {
+    display: block;
+    margin-top: 20px;
+    text-align: right;
+}
+.PluGzOne_print img {
+    float: right;
+    height: 20px;
+}
+.Anchor {
+    height: 0;
+    top: -70px;
+    position: relative;
+}
+.Anchor#Inicio {
+    top: 0;
+}
+.BtClose {
+    background-color: var(--main-bg-color);
+    color: #FFF;
+    float: right;
+    font-size: 1.5rem;
+    height: 30px;
+    line-height: 27px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 30px;
+    position: relative;
+    z-index: 1;
+}
+.BtClose:hover {
+    background-color: #FFF;
+    color: var(--main-bg-color);
+    text-decoration: none;
+}
+.PrintOnly {
+    display: none;
+}
+.BgPath {
+    padding: 0 40px 0 0;
+}
+.path {
+    color: #777;
+    margin: 0 0 30px 0;
+}
+.path a {
+    color: #777;
+    text-decoration: none;
+}
+.path a:hover {
+    text-decoration: underline;
+}
+.table {
+    display: block;
+}
+.tablerow {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.tablecel {
+    box-sizing: border-box;
+    flex: 1 1 50%;
+}
+i.seta {
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    display: inline-block;
+    margin: 35%;
+    height: 30%;
+    width: 30%;
+}
+i.seta:hover {
+    border-color: #000;
+}
+i.seta.esq {
+    transform: rotate(-135deg);
+    margin-right: 20%;
+}
+i.seta.dir {
+    transform: rotate(45deg);
+    margin-left: 20%;
+}
+/* OUTROS */
+
+/* SETAS */
+.Seta {
+  border: solid #FFF;
+  box-shadow: 0.25rem 0.25rem 0.25rem 0 #CCC;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 2rem;
+}
+
+.Seta.Left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.Seta.Right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.Seta.Up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+.Seta.Down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.BoxSetas {
+	width: 100%;
+    height: 0;
+    line-height: 0;
+    margin-top: -4rem;
+    padding: 2rem;
+    display: block;
+    position: relative;
+}
+.BoxSetas .Seta.Left {
+	float:left;
+}
+.BoxSetas .Seta.Right {
+	float:right;
+}
+.BoxSetas .Seta.Up, .BoxSetas .Seta.Down  {
+	text-align:center;
+	float:none;
+}
+
+/* PAGINADOR */
+.BoxPaginador {
+    text-align: center;
+}
+.Paginador {
+    border-right: 1px solid #3d3d3d;
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.Paginador span,
+.Paginador a {
+    border: 1px solid #3D3D3D;
+    border-right: 0;
+    box-sizing: border-box;
+    color: #3D3D3D;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 38px;
+    margin: 0;
+    min-width: 38px;
+    padding: 0 10px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+.Paginador a:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+.Paginador a.class_paginator {
+    background-color: #eee;
+    text-decoration: none;
+}
+.BtPaginador {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: #FFF;
+    vertical-align: middle;
+    text-align: center;
+}
+.BtPaginador img {
+    vertical-align: middle;
+}
+a.BtPaginador:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+/* PAGINADOR */
+
+/* MOSTRA GALERIA */
+.MostraGaleria {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  /*background: #EEE;
+  opacity:0;*/
+  display: none;
+}
+.abre-mostra-galeria {
+  cursor: pointer;
+}
+.MostraGaleriaFechar {
+  color: #3D3D3D;
+  cursor: pointer;
+  font-size: 6vh;
+  float: right;
+  font-family: sans-serif, arial;
+  height: 8vh;
+  line-height: 7vh;
+  text-align: center;
+  text-decoration: none;
+  width: 8vh;
+  z-index: 3;
+}
+.FechaPopUpGaleria:hover {
+  color: #AAA;
+}
+.MostraGaleriaTopo {
+  box-sizing: border-box;
+  height: 10vh;
+  padding: 1vh;
+  width: 100%;
+}
+.MostraGaleriaTotal {
+  color: #444;
+  float: left;
+  font-size: 5vh;
+  height: 8vh;
+  line-height: 7vh;
+  margin-left: 2vh;
+}
+.MostraGaleriaMiolo {
+  box-sizing: border-box;
+  height: 85vh;
+  margin: 0 auto;
+  width: 90vw;
+}
+.MostraGaleriaMiolo .mask {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+.MostraGaleriaMiolo .holder {
+  height: 100%;
+  width: 10000%;
+}
+.MostraGaleriaMiolo .page {
+  height: 100%;
+  float: left;
+}
+.MostraGaleriaMidia {
+  box-sizing: border-box;
+  height: 70vh;
+  line-height: 70vh;
+  font-size: 0;
+  width: 100%;
+}
+.MostraGaleriaMiolo.apenasmidia .MostraGaleriaMidia {
+  height: 85vh;
+  line-height: 85vh;
+}
+.MostraGaleriaMidia img {
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.MostraGaleriaDescricao {
+  box-sizing: border-box;
+  height: 15vh;
+  color: #3D3D3D;
+  font-size: 3vh;
+  font-family: sans-serif, arial;
+  overflow: auto;
+  padding-top: 1vh;
+  text-align: center;
+  width: 100%;
+}
+.MostraGaleriaSeta {
+  border-radius: 50%;
+  background-color: #F79622;
+  position: absolute;
+  top: 46vh;
+  height: 8vh;
+  width: 8vh;
+  text-align: center;
+  z-index: 1001;
+}
+.MostraGaleriaSeta:hover .seta {
+  /*border-color: #3D3D3D;*/
+}
+.MostraGaleriaSeta.esq {
+  left: 2vh;
+}
+.MostraGaleriaSeta.dir {
+  right: 2vh;
+}
+/* MOSTRA GALERIA */
+
+.SliderGaleria {
+  background-color: #EEE;
+}
+
+/* SITE */
+.enterButton {
+    background-color: #3E4095;
+    color: #FFF;
+    padding:1rem 3rem;
+    font-size: 3rem;
+    border: 1px solid #FFF;
+    border-radius:10px;
+    text-decoration: none;
+}
+.Miolo {
+    min-height: 75vh;
+}
+.BoxRestritaPrincipal {
+    margin-bottom: 30px;
+}
+.BoxRestritaMenu {
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.IconeRestrita {
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 3rem;
+    padding: 20px 10px 15px 10px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    vertical-align: center;
+}
+.IconeRestrita i {
+    font-size: 200%;
+    vertical-align: center;
+}
+.IconeRestrita:hover {
+    opacity: 0.9;
+}
+
+.BtMaisDetalhes {
+    background-color: #3D3D3D;
+    box-sizing: border-box;
+    color: #FFF;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+}
+.BtMaisDetalhes:hover {
+    background-color: #FFF;
+    color: var(--main-bg-color);
+}
+
+.BgWhite {
+	background-color: #FFF;
+}
+.BgGray {
+	background-color: #F1F1F1;
+}
+
+.BgContato {
+    margin-bottom: 2px;
+    padding-top: 0;
+    padding-bottom: 6rem;
+}
+.BoxContato p {
+	margin: 0.3rem;
+}
+.BoxContato h3 {
+	margin-bottom: 0.5rem;
+}
+
+.BoxBlog,
+.BoxBlog  .title,
+.BoxLocalizacao,
+.BoxLocalizacao .title {
+	color: #FFF;
+}
+
+.BoxContato {
+	padding-bottom: 1rem;
+}
+.BoxClientes .title,
+.BoxContato .title,
+.BoxLocalizacao .title {
+	text-align: left;
+}
+
+.BoxClientes .sectionTitle,
+.BoxContato .sectionTitle,
+.BoxLocalizacao .sectionTitle {
+	font-size: 4rem;
+	padding: 0.6rem 6rem 0.6rem 0.6rem;
+}
+
+.AC {
+	height: calc(100vh - 12rem);
+}
+.AC .page {
+	color: #FFF;
+	display: flex;
+		align-items: end;
+		justify-content: space-around;
+		flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: top center;
+}
+/*.BoxBlog a img {
+	filter: grayscale(1);
+}
+.BoxBlog a:hover img {
+	filter: grayscale(0);
+}*/
+
+.BoxPagina .text,
+.BoxPagina .title {
+	color: #EEE;
+}
+.BoxPagina .text img {
+	max-width: 90%;
+	height: auto;
+}
+.BoxPagina .text p {
+	box-sizing: border-box;
+}
+
+/* Facebook icons fix */
+._6qdm {
+	background-image: none !important;
+}
+
+@media only screen and (max-width: 1156px) {
+
+}
+
+@media only screen and (max-width: 998px) {
+
+    .BoxBusca {
+        flex-direction: column;
+    }
+    .BoxBusca > div {
+        text-align: center;
+        width: 100%;
+    }
+    .BoxBuscaVeiculo {
+        padding-right: 0;
+    }
+    .BoxFacaProposta {
+        padding-left: 0;
+    }
+    .BoxPagina {
+        padding: 20px 10px 30px 10px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+	.Logo img {
+		margin-top: 0.5rem;
+	}
+    .title {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .BoxClientes .sectionTitle,
+	.BoxContato .sectionTitle,
+	.BoxLocalizacao .sectionTitle,
+    .sectionTitle {
+        font-size: 3rem;
+		margin: 2rem 0 1rem 0;
+    }
+    .subtitle {
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .acTitle {
+        font-size: 3rem;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+    .tablerow {
+        flex-wrap: wrap;
+    }
+    .tablecel {
+        flex: 1 1 100%;
+    }
+    .path {
+        margin-bottom: 0;
+    }
+    .BoxVeiculo {
+        flex-wrap: wrap;
+    }
+    .BoxBuscaVeiculo {
+        order: 2;
+    }
+    .BoxFacaProposta {
+        padding: 15px 0;
+    }
+    .IconeRestrita {
+    	font-size:1.5rem;
+	}
+
+	.AC {
+		height: 70vw;
+	}
+
+	.AC .page {
+		background-position: left;
+	}
+}
+
+@media only screen and (min-width: 999px) {
+	.BoxMap {
+        padding: 0 2rem;
+	}
+}

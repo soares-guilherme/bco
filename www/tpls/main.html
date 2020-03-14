@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="pt-br" />
+        <meta name="description" content="{description}" />
+        <meta name="keywords" content="{keywords}" />
+        <meta name="author" content="PluGzOne - Sites e Sistemas Web em Pelotas-RS" />
+        <meta name="robots" content="follow, all" />
+        <!-- START BLOCK : head_opengraph -->
+        <link rel="image_src" href="{img}" />
+        <meta property="og:title" content="{title}" />
+        <meta property="og:site_name" content="{site_name}" />
+        <meta property="og:description" content="{description}" />
+        <meta property="og:image" content="{image}" />
+        <meta property="og:type" content="{type}" />
+        <meta property="og:url" content="{url}" />
+        <!-- START BLOCK : head_opengraph_imagesize -->
+        <meta property="og:image:width" content="{image_width}" />
+        <meta property="og:image:height" content="{image_height}" />
+        <!-- END BLOCK : head_opengraph_imagesize -->
+        <!-- END BLOCK : head_opengraph -->
+        <title>{titulo}</title>
+
+        <!--LINKS DO TEMA-->
+        <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/file_pz_theme/open-iconic-bootstrap.min.css">
+        <link rel="stylesheet" href="css/file_pz_theme/animate.css">
+        <link rel="stylesheet" href="css/file_pz_theme/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/file_pz_theme/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/file_pz_theme/magnific-popup.css">
+        <link rel="stylesheet" href="css/file_pz_theme/aos.css">
+        <link rel="stylesheet" href="css/file_pz_theme/ionicons.min.css">
+        <link rel="stylesheet" href="css/file_pz_theme/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="css/file_pz_theme/jquery.timepicker.css">
+
+        <link href="img/favicon.png" type="image/x-icon" rel="icon" />
+        <link href="img/favicon.png" type="image/x-icon" rel="shortcut icon" />
+
+        <link rel="stylesheet" href="css/file_pz_theme/flaticon.css">
+        <link rel="stylesheet" href="css/file_pz_theme/icomoon.css">
+        <link rel="stylesheet" href="css/file_pz_theme/style.css">
+        <!--LINKS DO TEMA-->
+
+
+    <!--<script src="/z1.js?revision=6{cacheKiller}" type="text/javascript"></script>-->
+        <link href="/z1.css?revision=6{cacheKiller}" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        
+        <div id="Container" align="center">
+            {miolo}
+        </div>
+
+        <!-- INCLUDE BLOCK : ./tpls/MostraGaleria.html -->
+        
+        <script type="text/javascript">            
+            $(document).ready(function(){
+	            function closeBgTopo() {
+	                if($('.Logo').hasClass('closed')) { return false; }
+
+	                $('.Logo, .BgTopoFake').removeClass('opened').addClass('closed').stop().animate({ height : '8rem' }, 600, 'linear');
+	                //$('.BgTopo').removeClass('opened').addClass('closed').animate({ marginTop : '-110px' }, 600, 'linear');
+	            }
+	            function restoreBgTopo() {
+	                if($('.Logo').hasClass('opened')) { return false; }
+
+	                $('.Logo, .BgTopoFake').removeClass('closed').addClass('opened').stop().animate({ height : '12rem' }, 600, 'linear');
+	                //$('.BgTopo').removeClass('closed').addClass('opened').animate({ marginTop : 0 }, 600, 'linear');
+	            }
+
+	            var TopoTop = document.documentElement.clientHeight/3;
+
+	            function fixBgTopo(){
+	                if( ! $('.Logo').hasClass('ignoreScroll')) {
+	                    var st = $(window).scrollTop();
+	                    var start = TopoTop;
+
+	                    if( $(window).width() < 1140 ) {
+	                        closeBgTopo();
+	                    } else {
+	                        if(st > start) {
+	                            closeBgTopo();
+	                        } else {
+	                            restoreBgTopo();
+	                        }
+	                    }
+	                }
+	            }
+
+                //topo scroll
+                fixBgTopo();
+
+                $(window).scroll(function(){
+                    fixBgTopo();
+                });
+                z1.events.onResize.push(function () {
+                    fixBgTopo();
+                });  /**/
+
+                z1.onResizeReady();
+
+                $.maskAll();
+            });
+        </script>
+        
+        <!-- START BLOCK : google_analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={google_analytics_id}"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          gtag('js', new Date());
+
+          gtag('config', '{google_analytics_id}');
+        </script>
+        <!-- END BLOCK : google_analytics -->
+        
+        <div id="fb-root"></div>
+		<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0&appId=653764311773970&autoLogAppEvents=1"></script>
+
+
+
+        <script src="../js/file_pz_theme/jquery.min.js"></script>
+        <script src="../js/file_pz_theme/jquery-migrate-3.0.1.min.js"></script>
+        <script src="../js/file_pz_theme/popper.min.js"></script>
+        <script src="../js/file_pz_theme/bootstrap.min.js"></script>
+        <script src="../js/file_pz_theme/jquery.easing.1.3.js"></script>
+        <script src="../js/file_pz_theme/jquery.waypoints.min.js"></script>
+        <script src="../js/file_pz_theme/jquery.stellar.min.js"></script>
+        <script src="../js/file_pz_theme/owl.carousel.min.js"></script>
+        <script src="../js/file_pz_theme/jquery.magnific-popup.min.js"></script>
+        <script src="../js/file_pz_theme/aos.js"></script>
+        <script src="../js/file_pz_theme/jquery.animateNumber.min.js"></script>
+        <script src="../js/file_pz_theme/bootstrap-datepicker.js"></script>
+        <script src="../js/file_pz_theme/jquery.timepicker.min.js"></script>
+        <script src="../js/file_pz_theme/scrollax.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="../js/file_pz_theme/google-map.js"></script>
+        <script src="../js/file_pz_theme/main.js"></script>
+
+
+
+
+    </body>
+</html>

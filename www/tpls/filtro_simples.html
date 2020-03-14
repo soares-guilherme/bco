@@ -1,0 +1,36 @@
+<div class="BoxBg BgBusca">
+    <!-- START BLOCK : filtro_veiculos_simples -->
+    <script type="text/javascript">
+        function getMarcasFromTipo() {
+            
+            ajaxGet_embedjs('/Ajax/getMarcas&negociacao={negociacao}&tipo='+getE('tipo').value, function (response) {
+                
+                if(response != '' && response != 'ERROR') {
+                    $('#marca').html(response);
+                }
+                
+                $('#marca').show();
+                getE('Marcaloading').style.display = 'none';
+                getE('marca').removeAttribute('disabled');
+            } );
+            
+            getE('Marcaloading').style.display = '';
+            $('#marca').hide();
+        }
+    </script>
+    <form action="{link_veiculos}" method="get">
+        <div class="BoxRow BoxBusca">
+            <div>
+                <h1 class="title">BUSCAR VEÍCULO</h1>
+            </div>
+            <div>{tipo}</div>
+            <div>
+                {marca}
+                <div id="Marcaloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</div>
+            </div>
+            <div>{ordenar}</div>
+            <div>{submit_filtro_veiculos_simples}</div>
+        </div>
+    {form_close}
+    <!-- END BLOCK : filtro_veiculos_simples -->
+</div>

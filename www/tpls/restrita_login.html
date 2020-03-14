@@ -1,0 +1,28 @@
+<style>
+.BoxRestritaLogin .BoxGrid-2 {
+    padding: 0 15px;
+}
+</style>
+<div class="BoxRow BoxRestritaLogin">
+    <div class="BoxGrid-2">
+        <h1 class="title">JÁ É CADASTRADO?</h1>
+        <p class="text">Preencha o formulário abaixo para acessar sua conta.</p>
+        <!-- START BLOCK : auth -->
+        <script type="text/javascript">
+            {javascript}
+        </script>
+        <div>
+            {form_auth}
+                <p>{auth_email}</p>
+                <p>{auth_senha}</p>
+                <p class="caption" align="justify">{auth_submit}&nbsp;<a class="EsqueciSenha" href="{link_esqueciasenha}">Esqueci a senha</a></p>
+            {form_close}
+        </div>
+        <!-- END BLOCK : auth -->
+    </div>
+	<div class="BoxGrid-2">
+        <h1 class="title">CADASTRE-SE</h1>
+        <p class="text" align="left">Acesse a página de cadastro clicando no botão abaixo e preencha o formulário.</p>
+        <p align="center"><a href="{link_cadastro}" title="CADASTRE-SE" class="fmSubmit cadastre">Cadastre-se</a></p>
+    </div>
+</div>

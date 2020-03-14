@@ -1,0 +1,81 @@
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+<div class="BoxRow BoxCadastro Miolo">
+    <h1 class="title">
+        {titulo}
+    </h1>
+    <div class="text">
+        <!-- START BLOCK : registrar_cadastro -->
+            <p>Preencha o formul&aacute;rio abaixo e clique em "Enviar Cadastro". A privacidade das suas informa&ccedil;&otilde;es &eacute; garantida.</p>
+            <!-- INCLUDE BLOCK : ./tpls/formulario_cadastro.html -->
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    setFormPF();
+                });
+            </script>
+           
+        <!-- END BLOCK : registrar_cadastro -->
+        <!-- START BLOCK : alterar_cadastro -->
+            <p>Preencha o formul&aacute;rio abaixo se desejar alterar alguma informa&ccedil;&atilde;o presente no seu cadastro, voc&ecirc; poder&aacute; voltar aqui em outro momento para fazer essas altera&ccedil;&otilde;es.</p>
+            <!-- INCLUDE BLOCK : ./tpls/formulario_cadastro.html -->
+            <script type="text/javascript">
+                getE('p_senhaatual').style.display = '';
+                getE('Anexos').style.display = 'none';
+                $(document).ready(function(){
+                    if(getE('cnpj').value.length > 0) {
+                        setFormPJ();
+                    } else {
+                        setFormPF();
+                    }
+                });
+            </script>
+            
+        <!-- END BLOCK : alterar_cadastro -->
+    </div>
+</div>
+<br clear="all" />
+<br>
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->
+
+<!-- START BLOCK : error -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('{msg}');
+} , 100);
+</script>
+<!-- END BLOCK : error -->
+<!-- START BLOCK : success_confirmar -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('O seu e-mail e cadastro foi confirmado com sucesso. Agora você poderá acessar a Área Restrita utilizando o e-mail e senha que forneceu durante o cadastro.', function () {
+        window.location.assign('{link_restrita}');
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : success_confirmar -->
+<!-- START BLOCK : success_registrar -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('O seu cadastro foi realizado com sucesso, agora só falta a confirmação do seu endereço de e-mail.\n\nImportante: verifique a caixa de entrada do seu e-mail para confirmar o endereço e ativar o seu cadastro.', function () {
+        window.location.assign('{link_inicial}');
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : success_registrar -->
+<!-- START BLOCK : success_registrar_comprar -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('O seu cadastro foi realizado com sucesso\n\nAgora voc&ecirc; ser&aacute; redirecionado para a p&aacute;gina onde voc&ecirc; poder&aacute; concluir a sua solicita&ccedil;&atilde;o.', function () {
+        window.location.assign('{link}');
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : success_registrar_comprar -->
+<!-- START BLOCK : success_alterar -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('Os seus dados foram alterados com sucesso\n\nAgora voc&ecirc; ser&aacute; redirecionado para a p&aacute;gina onde voc&ecirc; poder&aacute; acessar novamente a sua &Aacute;rea Restrita.', function () {
+        window.location.assign('{link_logout}');
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : success_alterar -->

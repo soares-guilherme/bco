@@ -1,0 +1,358 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+#Container {
+	margin: 0 auto;
+	width: 100%;
+}
+/* SLIDERS */
+.stage {
+    position:relative;
+}
+.mask {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.holder {
+    width: 10000%;
+    height: 100%;
+}
+.page {
+    float: left;
+}
+/* SLIDERS */
+.BoxRow {
+	box-sizing: border-box;
+	display: inline-block;
+	max-width: 1200px;
+	text-align: left;
+	width: 100%;
+}
+.BoxBg {
+	background-size:cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	display: block;
+    padding: 0;
+    margin: 0;
+	width: 100%;
+}
+
+.BoxGrid-2 {
+    box-sizing: border-box;
+	float: left;
+    vertical-align: top;
+    width: 50%;
+}
+.BoxGrid-2 .ImgOnly img {
+	max-width: 100%;
+}
+.BoxGrid-2-20{
+    float: left;
+    width: 20%;        
+    box-sizing: border-box;    
+}
+.BoxGrid-2-20 .ImgOnly img {
+    max-width: 100%;
+}
+.BoxGrid-2-25{
+    float: left;
+    width: 25%;        
+    box-sizing: border-box;    
+}
+.BoxGrid-2-25 .ImgOnly img {
+    max-width: 100%;
+}
+.BoxGrid-2-30{
+    float: left;
+    width: 30%;        
+    box-sizing: border-box;    
+}
+.BoxGrid-2-30 .ImgOnly img {
+    max-width: 100%;
+}
+.BoxGrid-2-33{
+    float: left;
+    width: 33%;        
+    box-sizing: border-box;    
+}
+.BoxGrid-2-33 .ImgOnly img {
+    max-width: 100%;
+}
+.BoxGrid-2-40 {
+    float: left;
+    width: 40%;        
+    box-sizing: border-box;    
+}
+.BoxGrid-2-40 .ImgOnly img {
+    max-width: 100%;
+}
+.BoxGrid-2-60 {
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+}
+.BoxGrid-2-60 .ImgOnly img {
+    max-width: 100%;
+}
+.BoxGrid-2-66{
+	float: left;
+	width: 66%;		
+	box-sizing: border-box;	
+}
+.BoxGrid-2-66 .ImgOnly img {
+	max-width: 100%;
+}
+.BoxGrid-2-70 {
+	float: left;
+	width: 70%;
+	box-sizing: border-box;
+}
+.BoxGrid-2-70 .ImgOnly img {
+	max-width: 100%;
+}
+.BoxGrid-2-75 {
+	float: left;
+	width: 75%;
+	box-sizing: border-box;
+}
+.BoxGrid-2-75 .ImgOnly img {
+	max-width: 100%;
+}
+.BoxGrid-2-80 {
+	float: left;
+	width: 80%;
+	box-sizing: border-box;
+}
+.BoxGrid-2-80 .ImgOnly img {
+	max-width: 100%;
+}
+.BoxGrid-2-Auto {
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 auto;
+	vertical-align: top;
+}
+.BoxGrid-2-Auto .ImgOnly img {
+	max-width: 100%;
+}
+.BoxGrid-3 {
+    box-sizing: border-box;
+    float: left;
+    vertical-align: top;
+    width: 33.3%;
+}
+.BoxGrid-3 .imagem img {
+	width: 100%;
+}
+.BoxGrid-3-Auto {
+	box-sizing: border-box;
+	float: left;
+	margin: 0 auto;
+	vertical-align: top;
+}
+.BoxGrid-3-Auto .ImgOnly img {
+	max-width: 100%;
+}
+
+.BoxGrid-4 {
+	box-sizing: border-box;
+	float: left;
+    vertical-align: top;
+	width: 25%;
+}
+.BoxGrid-4:nth-child(4n+1) {
+    clear: both;
+}
+
+.BoxGrid-5 {
+    box-sizing: border-box;
+    float: left;
+    vertical-align: top;
+    width: 20%;
+}
+.BoxGrid-5:nth-child(5n+1) {
+    clear: both;
+}
+
+.BoxGrid-6 {
+	box-sizing: border-box;
+    float: left;
+    vertical-align: top;
+	width: 16.6%;
+}
+.BoxGrid-6:nth-child(6n+1) {
+    clear: both;
+}
+
+.BoxKAR {
+	box-sizing: border-box;
+	display: inline-block;
+	overflow: hidden;
+   	position: relative;
+	width: 100%;
+}
+.BoxKAR:before {
+	content: "";
+	display: block;
+}
+.BoxKAR > .content {
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+}
+.BoxKAR img {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+	object-position: center;
+}
+.BoxKAR_1x2:before {
+    padding-top: 150%;
+}
+.BoxKAR_3x4:before {
+    padding-top: 133%;
+}
+.BoxKAR_1x1:before {
+	padding-top: 100%;
+}
+.BoxKAR_4x3:before {
+    padding-top: 75%;
+}
+.BoxKAR_3x5:before {
+	padding-top: 68%;
+}
+.BoxKAR_16x9:before {
+    padding-top: 56%;
+}
+.BoxKAR_21x9:before {
+    padding-top: 45%;
+}
+
+.ImgOnly {
+	font-size: 0;
+	line-height: 0;
+}
+.ImgOnly img {
+	max-width: 100%;
+}
+
+.MobileVisible {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .Menu {
+        display: none;
+    }
+    .MenuMobile {
+        display: block;
+    }
+	.MobileHidden {
+		display: none;
+	}
+	.MobileVisible {
+		display: block;
+	}
+	.MobileCenter {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.MobilePad {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.EnvolveGaleria .BoxRow {
+		margin-bottom: 0;
+	}
+	.BoxGrid-2,
+    .BoxGrid-2-20,
+    .BoxGrid-2-25,
+    .BoxGrid-2-30,
+    .BoxGrid-2-40,
+    .BoxGrid-2-60,
+    .BoxGrid-2-70,
+    .BoxGrid-2-75,
+    .BoxGrid-2-80,
+	.BoxGrid-2-Auto,
+	.BoxGrid-3,
+	.BoxGrid-3-Auto,
+    .BoxGrid-4,
+    .BoxGrid-4-Auto,
+	.BoxGrid-5,
+	.BoxGrid-5-Auto {
+		width: 100% /*!important*/;
+	}
+	.BoxGrid-2 img,
+	.BoxGrid-3 img,
+	.BoxGrid-3-Auto img {
+		margin: 0;
+		max-width: 100%;
+	}
+    .BoxGrid-6 {
+        width: 50%;
+    }
+    .BoxGrid-6:nth-child(2n+1) {
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 998px)  {
+    .Menu {
+        display: none;
+    }
+    .MenuMobile {
+        display: block;
+    }
+	.MobileHidden {
+		display: none;
+	}
+	.MobileCenter {
+		margin: 0 auto;
+		text-align: center;
+	}
+	.MobilePad {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+	.BoxGrid-2,
+    .BoxGrid-2-20,
+    .BoxGrid-2-25,
+    .BoxGrid-2-30,
+    .BoxGrid-2-40,
+	.BoxGrid-2-60,
+    .BoxGrid-2-70,
+    .BoxGrid-2-75,
+	.BoxGrid-2-80,
+	.BoxGrid-2-Auto,
+	.BoxGrid-3,
+	.BoxGrid-3-Auto {
+		width: 100%;
+	}
+	.BoxGrid-2 img,
+	.BoxGrid-3 img,
+	.BoxGrid-3-Auto img {
+		max-width: 100%;
+	}
+    .BoxGrid-4 {
+        width: 50%;
+    }
+	.BoxGrid-5,
+	.BoxGrid-5-Auto {
+		width: 33.3%;
+	}
+    .BoxGrid-6 {
+        width: 33.3%;
+    }
+    .BoxGrid-6:nth-child(3n+1) {
+        clear: both;
+    }
+}
+
+@media only screen and (min-width: 999px) {
+	.MenuMobile {
+        display: none;
+	}
+}

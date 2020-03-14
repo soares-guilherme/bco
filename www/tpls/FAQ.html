@@ -1,0 +1,32 @@
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+
+<div class="BoxRow BoxPagina">
+    <!-- INCLUDE BLOCK : ./tpls/path.html -->
+    <a href="{link_voltar}" class="BtClose"><b>&larr;</b></a>
+    <h1 class="title">PERGUNTAS FREQUENTES</h1>
+    <!-- START BLOCK : pergresp -->
+    <div class="holder FAQ">
+        <div class="spoiler">
+            <a href="javascript:;" class="expand subtitle">
+                <span class="icone">+</span>{pergunta}
+            </a>
+        </div>
+        <div class="full">
+            <a href="javascript:;" class="hide subtitle">
+                <span class="icone">-</span>{pergunta}
+            </a>
+            <div class="text full_animate">{resposta}</div>
+        </div>
+    </div>
+    <!-- END BLOCK : pergresp -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+        var E_FAQ = new z1.Expand('.holder');
+    } );
+    </script>
+    <!-- START BLOCK : none -->
+    <p align="center">Selecione uma Categoria para poder visualizar<br />as Perguntas e Respostas.</p>
+    <!-- END BLOCK : none -->
+</div>
+
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->

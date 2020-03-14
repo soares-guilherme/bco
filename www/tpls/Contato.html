@@ -1,0 +1,30 @@
+<div class="BoxRow">
+    <div class="Espacamento">
+        
+        <!-- START BLOCK : contato -->
+        <script type="text/javascript">
+            {javascript}
+        </script>
+        {form_contato}
+            {contato_nome}
+            {contato_email}
+            {contato_telefone}
+            {contato_mensagem}
+        <p align="center">{form_contato_submit}</p>
+        {form_close}
+        <!-- END BLOCK : contato -->
+        <br clear="all">
+        <br clear="all">
+        <br clear="all">
+    </div>
+</div>
+
+<!-- START BLOCK : form_sucesso -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('A sua mensagem foi enviada com sucesso.<br /><br />Agradecemos o seu contato.', function () {
+        window.location.assign('{link_inicial}');
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : form_sucesso -->

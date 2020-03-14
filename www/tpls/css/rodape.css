@@ -1,0 +1,41 @@
+.BgRodape {
+	border-top: 1px solid #E8E8E8;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.BoxRodape,
+.BoxRodape a {
+	color:#EFEFEF;
+	text-align:center;
+	text-decoration: none;
+}
+
+.MenuRodape {
+    display: inline-block;
+    text-align: left;
+}
+.MenuRodape .ItemMenu {
+    color: #FFF;
+    font-size: 14px;
+    padding: 7px;
+}
+.ContatosRodape {
+    color: #FFF;
+    display: inline-block;
+    float: right;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 20px 0 50px 0;
+}
+.ContatosRodape a {
+    color: #FFF;
+    text-decoration: none;
+}
+.ContatosRodape a:hover {
+    text-decoration: underline;
+}
+.ContatosRodape img {
+    vertical-align: middle;
+}

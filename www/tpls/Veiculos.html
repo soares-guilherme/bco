@@ -1,0 +1,42 @@
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+
+<!-- INCLUDE BLOCK : ./tpls/filtro_simples.html -->
+
+<div class="BoxBg BgVeiculos">
+    <div class="BoxRow BoxVeiculos">
+        
+        <h1 class="title">VEÍCULOS</h1>
+    
+        <!-- START BLOCK : nada -->
+        <div align="center" class="text Nada">
+            Não foi encontrado nenhum resultado.<br>
+            <br>
+            Tente variar os parâmetros da busca.
+        </div>
+        <!-- END BLOCK : nada -->
+        <!-- START BLOCK : busca_vazia -->
+        <p align="center" class="text nada">A busca deve ter mais que 2 caracteres.</p>
+        <!-- END BLOCK : busca_vazia -->
+        
+        <div>
+            <!-- START BLOCK : item -->
+            <div class="BoxGrid-3 ItemVeiculo">
+                <a class="BoxKAR BoxKAR_4x3 ImgOnly ImagemVeiculo" href="{link}" style="background-image: url('{img}');" title="{nome}">
+                    <div class="content">
+                        <img src="{img}" alt="{nome}" />
+                    </div>
+                </a>
+                <p class="subtitle">{nome}</p>
+                <p class="caption">{especificacoes}</p>
+                <p class="prices">{valor}</p>
+                <a class="BtMaisDetalhes" href="{link}">MAIS DETALHES</a>
+            </div>
+            <!-- END BLOCK : item -->
+        </div>
+    </div>
+    
+    <!-- INCLUDE BLOCK : ./tpls/paginador.html -->
+    
+</div>
+
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->

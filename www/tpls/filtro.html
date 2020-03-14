@@ -1,0 +1,107 @@
+<div class="FiltroVeiculo">
+	<!-- START BLOCK : formulario_busca -->
+	<script type="text/javascript">
+		{javascript}
+	</script>
+	<!-- S TART BLOCK : hide -->
+	<script type="text/javascript">
+	    function getMarcasFromTipo() {
+	    	
+			ajaxGet_embedjs('/Ajax/getMarcas&negociacao={negociacao}&tipo='+getE('tipo').value, function (response) {
+				
+				if(response != '' && response != 'ERROR') {
+					$('#marca').html(response);
+				}
+				
+	            $('#marca').show();
+				getE('Marcaloading').style.display = 'none';
+				getE('marca').removeAttribute('disabled');
+				getE('modelo').readonly = '';
+				getE('ano').readonly = '';
+				getE('combustivel').readonly = '';
+			} );
+			
+			getE('Marcaloading').style.display = '';
+	        $('#marca').hide();
+		}
+		function getModelosFromMarca() {
+	        
+			ajaxGet_embedjs('/Ajax/getModelos&negociacao={negociacao}&marca='+getE('marca').value, function (response) {
+				
+				if(response != '' && response != 'ERROR') {
+					$('#modelo').html(response);
+				}
+				
+	            $('#modelo').show();
+				getE('Modeloloading').style.display = 'none';
+				getE('modelo').removeAttribute('disabled');
+				getE('ano').readonly = '';
+				getE('combustivel').readonly = '';
+			} );
+	        
+			getE('Modeloloading').style.display = '';
+	        $('#modelo').hide();
+		}
+		function getAnosFromModelo() {
+	        
+			ajaxGet_embedjs('/Ajax/getAnos&negociacao={negociacao}&modelo='+getE('modelo').value, function (response) {
+				
+				if(response != '' && response != 'ERROR') {
+					$('#ano').html(response);
+				}      
+	            
+	            $('#ano').show();
+				getE('Anoloading').style.display = 'none';
+				getE('ano').removeAttribute('disabled');
+				getE('combustivel').readonly = '';
+			} );
+	        
+			getE('Anoloading').style.display = '';
+	        $('#ano').hide();
+		}
+		function getCombustiveisFromAno() {
+	        
+			ajaxGet_embedjs('/Ajax/getCombustiveis&negociacao={negociacao}&modelo='+getE('modelo').value+'&ano='+getE('ano').value, function (response) {
+				
+				if(response != '' && response != 'ERROR') {
+					$('#combustivel').html(response);
+				}      
+	            
+	            $('#combustivel').show();
+				getE('Combustivelloading').style.display = 'none';
+				getE('combustivel').removeAttribute('disabled');
+			} );
+	        
+			getE('Combustivelloading').style.display = '';
+	        $('#combustivel').hide();
+		}
+	</script>
+	<!-- E ND BLOCK : hide -->
+	{busca_form}
+        <div class="ItemFiltro">
+            {tipo}
+        </div>
+        <div class="ItemFiltro">
+            {marca}
+            <div id="Marcaloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</div>
+        </div>
+        <div class="ItemFiltro">
+            {modelo}
+            <div id="Modeloloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</div>
+        </div>
+        <div class="ItemFiltro">
+            {ano}
+            <div id="Anoloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</div>
+        </div>
+        <div class="ItemFiltro">
+            {combustivel}
+            <div id="Combustivelloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</div>
+        </div>
+        <div class="ItemFiltro">
+            {ordenar}
+            <div id="Ordenarloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</div>
+        </div>
+        {submit_pesquisar}
+	{form_close}
+	<!-- END BLOCK : formulario_busca -->
+</div>

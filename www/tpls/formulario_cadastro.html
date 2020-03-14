@@ -1,0 +1,250 @@
+<script type="text/javascript">
+	{javascript}
+</script>
+<script type="text/javascript">
+    function setFormPF() {
+        getE('pf').checked = 'checked';
+        getE('pj').checked = '';
+        
+        $('.pf_on').css('display', '').find('input,select,textarea').attr('ignore', 'ignore');
+        $('.pj_on').each(function(){
+            if(!$(this).hasClass('pf_on')) {
+                $(this).css('display', 'none').find('input,select,textarea').attr('ignore', 'yes');
+            }
+        });
+    }
+    
+    function setFormPJ() {
+        getE('pj').checked = 'checked';
+        getE('pf').checked = '';
+        
+        $('.pj_on').css('display', '').find('input,select,textarea').attr('ignore', 'ignore');
+        $('.pf_on').each(function(){
+            if(!$(this).hasClass('pj_on')) {
+                $(this).css('display', 'none').find('input,select,textarea').attr('ignore', 'yes');
+            }
+        });
+    }
+    
+	function CEPChange() {
+		var cep = getE('cep').value.replace(/[^0-9]+/g, "");
+		if(cep.length != 8) {
+			return;
+		}
+		ajaxGet_embedjs('/Ajax/consultacep&cep='+cep, function (text) {
+			
+			getE('CEPloading').style.display = 'none';
+			getE('endereco').readonly = '';
+			getE('bairro').readonly = '';
+			getE('id_cidade').readonly = '';
+			getE('estado').readonly = '';
+			fixCssLayout();
+			
+			if(text != 'ERROR') {
+				/*UFChange();*/
+				getE('numero').focus();
+			}
+		} );
+		getE('CEPloading').style.display = '';
+		getE('endereco').readonly = 'readonly';
+		getE('bairro').readonly = 'readonly';
+		getE('id_cidade').readonly = 'readonly';
+		getE('estado').readonly = 'readonly';
+		fixCssLayout();
+	}
+	
+	function UFChange() {
+		var last_val = null;
+		if(getE('estado').value.length != 2) {
+			return;
+		}
+		if(getE('id_cidade').value.length > 0) {
+			last_val = getE('id_cidade').value;
+		}
+		ajaxGet_embedjs(url_ajax + 'consultauf&uf='+getE('estado').value, function (response) {
+			
+			getE('UFloading').style.display = 'none';
+			getE('estado').readonly = '';
+			getE('id_cidade').readonly = '';
+			
+			if(response != '' && response != 'ERROR') {
+				$('#id_cidade').html(response);
+				if(last_val){
+					getE('id_cidade').value = last_val;
+				}
+			}
+		} );
+		getE('UFloading').style.display = '';
+		getE('estado').readonly = 'readonly';
+		getE('id_cidade').readonly = 'readonly';
+	}
+    
+	var SPMaskBehavior = function (val) {
+	  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+	},
+	spOptions = {
+	  onKeyPress: function(val, e, field, options) {
+	      field.mask(SPMaskBehavior.apply({}, arguments), options);
+	    }
+	};
+</script>
+{form_cadastro}
+
+<p>&nbsp;</p>
+<h3>Tipo de Pessoa</h3>
+<p>
+    <label><input id="pj" name="tipo_pessoa" value="pj" onclick="setFormPJ();" type="radio" checked="checked" />&nbsp;Pessoa Jur&iacute;dica&nbsp;</label>
+    <label><input id="pf" name="tipo_pessoa" value="pf" onclick="setFormPF();" type="radio" />&nbsp;Pessoa F&iacute;sica&nbsp;</label><br />
+</p>
+
+<br class="pj_on" clear="all">
+<h3 class="pj_on">Informações de Pessoa Jurídica</h3>
+<div class="pj_on">
+    <div class="BoxGrid-2">
+        <p>Razão social: *</p>
+        <p>{razaosocial}</p>
+        <p>CNPJ: *</p>
+        <p>{cnpj}</p>
+    </div>
+    <div class="BoxGrid-2">
+        <p>Insc. Estadual:</p>
+        <p>{inscricaoestadual}</p>
+    </div> 
+</div>
+
+<br clear="all">
+<p class="pj_on">&nbsp;</p>
+<h3 class="pj_on">Informações do Responsável</h3>
+<h3 class="pf_on">Informações Pessoais</h3>
+<div>
+    <div class="BoxGrid-2">
+        <p>Nome Completo: *</p>
+        <p>{nome}</p>
+        <p>RG: *</p>
+        <p>{rg}</p>
+        <p>Órgão expedidor: *</p>
+        <p>{orgaoexpedidor}</p>
+    </div>
+    <div class="BoxGrid-2">
+        <p class="pf_on">CPF: *</p>
+        <p class="pf_on">{cpf}</p>
+        <p>Data de Nascimento: *</p>
+        <p>{nascimento}</p>
+        <p>Sexo: *</p>
+        <p>{sexo}</p>
+    </div> 
+</div>
+
+<br clear="all">
+<p>&nbsp;</p>
+<h3>Localiza&ccedil;&atilde;o</h3>
+<div>
+    <div class="BoxGrid-2">
+	    <p>CEP: *&nbsp;&nbsp;<span id="CEPloading" style="display:none;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</span></p>
+	    <p>{cep}</p> 
+	    <p>Estado (UF): *&nbsp;<span id="UFloading" style="display:none;margin-left:15px;"><img src="img/Loading.gif" width="18" height="18" border="0" style="margin-bottom:-4px;" />Aguarde ...</span></p>
+	    <p>{estado}</p>
+        <p>Cidade: *</p>
+        <p>{id_cidade}</p>
+        <p>Bairro: *</p>
+        <p>{bairro}</p>
+    </div>
+    <div class="BoxGrid-2">
+        <p>Endere&ccedil;o: *</p>
+        <p>{endereco}</p>  
+        <p>N&uacute;mero: *</p>
+        <p>{numero}</p> 
+        <p>Complemento: <span class="DescriProdutoLista">(opcional)</span></p>
+        <p>{complemento}</p>   
+    </div>
+</div>
+
+<br clear="all">
+<p>&nbsp;</p>
+<h3>Informações de Contato</h3>
+<div>
+    <div class="BoxGrid-2">
+        <p>DDD/Fone 1: *</p>
+	    <p>{telefone1}</p>
+	    <p>DDD/Fone 2: <span class="DescriProdutoLista">(opcional)</span></p>
+	    <p>{telefone2}</p>
+    </div>
+    <div class="BoxGrid-2">
+	    <p>E-mail: *</p>
+	    <p>{email}</p>
+	    <p>Confirmar E-mail: *</p>
+	    <p>{confirmar_email}</p>
+    </div>
+</div>
+
+<br clear="all">
+<h3>Informações Financeiras</h3>
+<div>
+    <div class="BoxGrid-1">
+        <p>Endereço Bitcoin: *</p>
+	    <p>{link}</p>
+    </div>
+    <div class="BoxGrid-2">
+        <p>Banco: *</p>
+	    <p>{banco_nome}</p>
+	    <p>Agência: *</p>
+	    <p>{banco_agencia}</p>
+    </div>
+    <div class="BoxGrid-2">
+	    <p>Operação: <span class="DescriProdutoLista">(opcional)</span></p>
+	    <p>{banco_operacao}</p>
+	    <p>Número do Conta: *</p>
+	    <p>{banco_conta}</p>
+    </div>
+</div>
+
+<div id="Anexos">
+	<br clear="all">
+	<h3>Informações de Autenticidade</h3>
+	<div>
+	    <div class="BoxGrid-1">
+	        <p>Foto do seu rosto: *</p>
+		    <p>{anexo_rosto}</p>
+		    <p>Foto de seu documento com foto: *</p>
+		    <p>{anexo_documento}</p>
+	    </div>
+	</div>
+</div>
+
+<br clear="all">
+<p>&nbsp;</p>
+<h3>Informa&ccedil;&otilde;es de login</h3>
+<div id="p_senhaatual" style="display:none;">
+	<p>Senha Atual:</p>
+	<p>{senha_atual}</p>
+</div>
+<div>
+    <div class="BoxGrid-2">
+	    <p>Senha: *</p>
+	    <p>{senha}</p>
+    </div>
+    <div class="BoxGrid-2">
+	    <p>Confirmar Senha: *</p>
+	    <p>{confirmar}</p>
+    </div>
+</div>
+
+<!--<br clear="all">
+<p>&nbsp;</p>
+<h3>Verifica&ccedil;&atilde;o Humana</h3>
+<div class="BoxGrid-2">
+	<p>C&oacute;digo de Verifica&ccedil;&atilde;o: *</p>
+	<p>{code}</p>
+</div>-->
+
+<p>&nbsp;</p>           
+<p align="center">{submit}</p>
+{form_close}
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $.maskAll();
+    $('#telefone1,#telefone2').mask(SPMaskBehavior, spOptions);
+    UFChange();
+});
+</script>

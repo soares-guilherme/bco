@@ -1,0 +1,89 @@
+<!-- START BLOCK : registraaporte -->
+	<script type="text/javascript">
+	{javascript}
+	</script>
+	<a href="{link_restrita}" style="float: right;clear:both; margin-top:2rem;">&larr; Voltar</a>
+	<h1>Novo aporte</h1>
+	{form_registraaporte}
+	<table border="0" cellspacing="8" cellpadding="0" class="CinzaEsc" align="center" style="text-align:left;">
+		<tr>
+			<td colspan="2">Para realizar um aporte preencha abaixo o valor desejado para <i>Depósito em R$</i> e escolha a <i>Forma de depósito</i>, podendo ser através de depósito em conta ou através de carteira Bitcoin. Seu rendimento vai iniciar em até 48 horas após o aporte.</td>
+		</tr>
+		<tr>
+			<td align="center">Dólar BTC (BRL/USD): {dolar_quotation}</td>
+			<td align="center">Bitcoin (BTC/USD): {btc_quotation}</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h2>Aporte</h2></td>
+		</tr>
+		<tr>
+			<td>Depósito em R$ Real(BRL):</td>
+			<td>{aporte}</td>
+		</tr>
+		<tr>
+			<td>Forma de depósito:</td>
+			<td>{tipo}</td>
+		</tr>
+		<tr>
+			<td>Taxa Administrativa:</td>
+			<td>{taxa}</td>
+		</tr>
+		<tr>
+			<td colspan="2"><h2>Valor estimado do aporte</h2></td>
+		</tr>
+		<tr>
+			<td align="right">$ Dólar(USD):</td>
+			<td>{valor}</td>
+		</tr>
+		<tr>
+			<td align="right">Bitcoin:</td>
+			<td>{valor_btc}</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<div class="instructions instructionsBITCOIN" style="display: none; text-align: center;">
+				<h2>INSTRUÇÕES BITCOIN</h2>
+				<p>Realize um pagamento bitcoin para o endereço: <a id="BTCURL" href="bitcoin:184arKkWasEexFqS8XhGPEX7c8LYx492Yq"><b id="BTCTo">184arKkWasEexFqS8XhGPEX7c8LYx492Yq</b></a> no valor de <b id="BTCAmount">informar acima</b> bitcoins.</p>
+				<div align="center"><div id="qrcode"></div></div>
+				<p style="opacity:0.7;">(não esqueça de registrar o aporte clicando botão abaixo)</p>
+			</div>
+			<div class="instructions instructionsCONTA" style="display: none; text-align: center;">
+				<h2>INSTRUÇÕES CONTA</h2>
+				<p>Realize um depósito ou transferência de R$ <b id="BRLAmount">informar acima</b> para a seguinte conta:</p>
+				<p align="center">
+					Banco: <b>Banco do Brasil</b><br>
+					Agência: <b>3124-0</b><br>
+					CC: <b>36504-1</b><br>
+					CNPJ: <b>33.200.941/0001-28</b><br>
+					<b>BGM Consultoria em Investimento Eireli</b></p>
+				<p style="opacity:0.7;">(não esqueça de registrar o aporte clicando botão abaixo)</p>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center">{submit}</td>
+		</tr>
+	</table>
+	<br />
+	{form_close}
+	<script type="text/javascript">
+	    
+	function TipoChange() {
+		$('.instructions').hide();
+		if(getE('tipo').value) {
+			$('.instructions'+getE('tipo').value).show();
+		}
+	}
+		
+	$(document).ready(function(){
+	    $.maskAll();
+		
+		var qrcode = new QRCode(document.getElementById("qrcode"), $('#BTCTo').text());
+		
+		window.QRCodeChange = function () {
+			qrcode.clear();
+			qrcode.makeCode($('#BTCURL').attr('href'));
+		}
+	});
+	</script>
+<!-- END BLOCK : registraaporte -->

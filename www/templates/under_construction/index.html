@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="PluGzOne" />
+		<meta name="robots" content="follow, all" />
+		<title>{{company_name}}</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		
+		<style>
+		html {
+			font-family: 'Roboto', sans-serif;
+		}
+		html, div, p, img {
+			box-sizing: border-box;
+		}
+		#Container {
+			display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		align-content: center;
+    		flex-wrap: wrap;
+    		flex-direction: column;
+		}
+		#Container div {
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+		.Footer {
+			display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		align-content: center;
+    		flex-wrap: wrap;
+		}
+		.Footer img {
+			margin: 1rem;
+		}
+		</style>
+		
+		<script>
+		    document.documentElement.innerHTML = document.documentElement.innerHTML.replace('{{company_name}}', 'Rodrigues & Medeiros');
+		</script>
+		
+	</head>
+	<body>
+		
+		<div id="Container">
+			<div><img alt="{{company_name}}" src="img/logo.png" style="max-width: 100%; padding: 1rem;" /></div>
+			<div><h1 style="text-align: center;">Nosso site em construção, volte em breve.</h1></div>
+			<div><img alt="Em construção" src="img/under_construction.png" style="max-width:100%;" /></div>
+			<div class="Footer">Em desenvolvimento por <img alt="PluGzOne" src="img/LogoPluGzOne.png" /></div>
+		</div>
+		
+	</body>
+</html>

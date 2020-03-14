@@ -1,0 +1,56 @@
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+	<div class="BoxRow Miolo">
+        <!-- START BLOCK : auth_login -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_login.html -->
+	    <!-- END BLOCK : auth_login -->
+	    <!-- START BLOCK : auth_principal -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_menu.html -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_principal.html -->
+	    <!-- END BLOCK : auth_principal -->
+	    <!-- START BLOCK : auth_arquivos -->
+            <!-- INCLUDE BLOCK : ./tpls/restrita_menu.html -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_arquivos.html -->
+	    <!-- END BLOCK : auth_arquivos -->
+	    <!-- START BLOCK : auth_minhascompras -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_minhascompras.html -->
+	    <!-- END BLOCK : auth_minhascompras -->
+	    <!-- START BLOCK : auth_rentabilidade -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_rentabilidade.html -->
+	    <!-- END BLOCK : auth_rentabilidade -->
+	    <!-- START BLOCK : auth_aporte -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_aporte.html -->
+	    <!-- END BLOCK : auth_aporte -->
+	    <!-- START BLOCK : auth_saque -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_saque.html -->
+	    <!-- END BLOCK : auth_saque -->
+	    <!-- START BLOCK : auth_meusgrupos -->
+            <!-- INCLUDE BLOCK : ./tpls/restrita_menu.html -->
+		    <!-- INCLUDE BLOCK : ./tpls/restrita_meusgrupos.html -->
+	    <!-- END BLOCK : auth_meusgrupos -->
+    </div>
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->
+
+<!-- START BLOCK : error -->
+<script type="text/javascript">
+setTimeout( function () {
+	z1Alert('{msg}', function () {
+    	var lnk = '{link}';
+    	if(lnk) {
+			window.location.assign(lnk);
+		}
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : error -->
+<!-- START BLOCK : success -->
+<script type="text/javascript">
+setTimeout( function () {
+    z1Alert('{msg}', function () {
+    	var lnk = '{link}';
+    	if(lnk) {
+			window.location.assign(lnk);
+		}
+    } );
+} , 100);
+</script>
+<!-- END BLOCK : success -->

@@ -1,0 +1,88 @@
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+
+<div class="BoxRow MioloNewsletter">
+	<div class="Espacamento">
+        <h2 class="title"><i>Participe da Newsletter</i></h2>
+	    <div id="Newsletter" class="text" align="left">
+		    <h3>Preencha o seu Nome e E-mail no formul&aacute;rio abaixo para come&ccedil;ar a receber nossa Newsletter periodicamente.</h3>
+		    <!-- START BLOCK : newsletter_interna -->
+		    <script type="text/javascript">
+			    {javascript}
+		    </script>
+		    {form_newsletter_interna}
+                <div>
+                    Nome:
+                    {newsletter_nome}
+                </div>
+                <div>
+                    E-mail:
+                    {newsletter_email}
+                </div>
+                <br clear="all">
+                {submit}
+		    {form_close}
+		    <!-- END BLOCK : newsletter_interna -->
+		    <br clear="all">
+		    <p>Caso voc&ecirc; j&aacute; esteja cadastrado aguarde e voc&ecirc; receber&aacute; nossas novidades em breve.</p>
+		    <p>Caso voc&ecirc; tenha se cadastrado faz algum tempo e ainda n&atilde;o recebeu nossas Newsletters verifique se o nosso remetente de e-mail "contato@restaurantecruzdemalta.com.br" n&atilde;o se encontra na sua lista de spam, ou se nossos e-mails n&atilde;o encontram-se na sua pasta de SPAM.</p>
+		    <br />
+		    <h2>N&atilde;o deseja mais participar da Newsletter?</h2>
+		    <p>Se voc&ecirc; n&atilde;o deseja mais receber nossos e-mails com informa&ccedil;&otilde;es, dicas, ofertas e promo&ccedil;&otilde;es preencha exatamente o e-mail que deseja desvincular da nossa Newsletter no campo mais abaixo.</p>
+		    <!-- START BLOCK : optout -->
+		    <script type="text/javascript">
+			    {javascript}
+		    </script>
+		    {form_optout}
+		    <h4>E-mail que deseja desvincular:</h4>
+		    <p align="left">
+			    {optout_email}
+			    <br clear="all">
+			    {optout_submit}
+		    </p>
+		    {form_close}
+		    <!-- START BLOCK : optout -->
+		    <br clear="all" />
+		    <br clear="all" />
+		    <br clear="all" />
+	    </div>
+    </div>
+</div>
+
+<br clear="all" />
+
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->
+
+<!-- START BLOCK : error -->
+<script type="text/javascript">
+setTimeout( function () {
+	z1Alert('{msg}');
+} , 100);
+</script>
+<!-- END BLOCK : error -->
+<!-- START BLOCK : form_sucesso -->
+<script type="text/javascript">
+setTimeout( function () {
+	z1Alert('O seu cadastro foi realizado com sucesso.<br /><br />Agora voc&ecirc; &eacute; assinante do nosso Informativo.\nEm breve voc&ecirc; estar&aacute; recebendo nossas novidades.', function () {
+		window.location.assign('{link_site}');
+	} );
+} , 100);
+</script>
+<!-- END BLOCK : form_sucesso -->
+<!-- START BLOCK : form_optout_envio -->
+<script type="text/javascript">
+setTimeout( function () {
+	z1Alert('Voc&ecirc; receber&aacute; um e-mail com mais informa&ccedil;&otilde;es sobre como encerrar sua participa&ccedil;&atilde;o no noss Informativo.', function () {
+		window.location.assign('{link_newsletter}');
+	} );
+} , 100);
+</script>
+<!-- END BLOCK : form_optout_envio -->
+<!-- START BLOCK : form_optout_sucesso -->
+<script type="text/javascript">
+setTimeout( function () {
+	z1Alert('Voc&ecirc; foi retirado do nosso Informativo com sucesso!<br /><br />Se desejar voltar a receber nosso Informativo &eacute; s&oacute; realizar seu cadastro novamente.', function () {
+		window.location.assign('{link_newsletter}');
+	} );
+} , 100);
+</script>
+<!-- END BLOCK : form_optout_sucesso -->

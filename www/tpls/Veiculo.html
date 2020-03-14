@@ -1,0 +1,175 @@
+<!-- INCLUDE BLOCK : ./tpls/topo.html -->
+<div class="BoxRow BoxPagina">
+    <!-- INCLUDE BLOCK : ./tpls/path.html -->
+    <a href="{link_voltar}" class="BtClose"><b>&larr;</b></a>
+    <div class="BoxVeiculo">
+        <div class="BoxGrid-2-30 BoxBuscaVeiculo">
+            <!-- INCLUDE BLOCK : ./tpls/filtro.html -->
+        </div>
+        <div class="BoxGrid-2-70">
+            <div>
+                <div class="BoxGrid-2-60 BoxFotoVeiculo">
+                    <h1 class="subtitle">DETALHES DO VEÍCULO</h1>
+                    <div class="SP_GaleriaVeiculo">
+                        <div class="mask">
+                            <div class="holder">
+                                <!-- START BLOCK : foto -->
+                                <a class="page BoxBg BoxKAR BoxKAR_4x3 ImgOnly ImagemVeiculo abre-mostra-galeria" data-holder="SliderGaleria" style="background-image: url('{img}');">
+                                    <div class="content">
+                                        <img src="{img}" />
+                                    </div>
+                                </a>
+                                <!-- END BLOCK : foto -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- START BLOCK : hide -->
+                    <div class="BoxRow BoxSetasGaleria">
+                        <a href="javascript:;" class="goto_left Left SetaGaleria"></a>
+                        <a href="javascript:;" class="goto_right Right SetaGaleria"></a>
+                    </div>
+                    <!-- END BLOCK : hide -->
+                    <script type="text/javascript">
+                        var SP_GaleriaVeiculo;
+                        $(document).ready(function () {
+                            SP_GaleriaVeiculo = new z1.SlidePager('.SP_GaleriaVeiculo', '1,1,1', 'horizontal', 10);
+                        });
+                    </script>
+                    
+                    <div class="MostraGaleria SliderGaleria">
+                        <div class="MostraGaleriaTopo">
+                            <div class="MostraGaleriaTotal text dark" align="center">
+                                <b class="current_page"></b> de <b class="total_page"></b>
+                            </div>
+                            <span align="center" class="text dark"></span>
+                            <a class="MostraGaleriaFechar fechar">x</a>
+                        </div>
+                        <div class="MostraGaleriaMiolo apenasmidia" align="center">
+                            <div class="mask">
+                                <div class="holder">
+
+                                    <!-- START BLOCK : mostra_foto -->
+                                    <div class="page">
+                                        <div class="MostraGaleriaMidia">
+                                            <img src="{img}" />
+                                        </div>
+                                    </div>
+                                    <!-- END BLOCK : mostra_foto -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <a href="javascript:;" class="MostraGaleriaSeta esq goto_left"><i class="seta esq"></i></a>
+                        <a href="javascript:;" class="MostraGaleriaSeta dir goto_right"><i class="seta dir"></i></a>
+                    </div>
+                    <script type="text/javascript">
+                    var SliderGaleria;
+                    $(document).ready(function () {
+                        SliderGaleria = new z1.MostraGaleria('.SliderGaleria');
+                    });
+                    </script>
+                </div>
+                <div class="BoxGrid-2-40 BoxFacaProposta">
+                    <h1 class="subtitle">FAÇA SUA PROPOSTA</h1>
+                    <!-- START BLOCK : proposta -->
+                    <script type="text/javascript">
+                        {javascript}
+                    </script>
+                    {form_proposta}
+                        {proposta_nome}
+                        {proposta_email}
+                        {proposta_telefone}
+                        {proposta_mensagem}
+                        {form_proposta_submit}
+                    {form_close}
+                    <script type="text/javascript">
+                    $(document).ready(function(){
+                        var phoneMask = function (val) {
+                          return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+                        },
+                        phoneMaskOptions = {
+                          onKeyPress: function(val, e, field, options) {
+                              field.mask(phoneMask.apply({}, arguments), options);
+                            }
+                        };
+                        $.maskAll();
+                        $('#proposta_telefone').mask(phoneMask, phoneMaskOptions);
+                    });
+                    </script>
+                    <!-- END BLOCK : proposta -->
+                </div>
+            </div>
+            <br clear="all" />
+            <h1 class="subtitle">{titulo}</h1>
+            <h1 class="prices">{valor}</h1>
+            <div class="table TabelaEspecificacoes text">
+                <div class="tablerow">
+                    <div class="tablecel">Marca</div>
+                    <div class="tablecel">{marca}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Modelo</div>
+                    <div class="tablecel">{modelo}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Ano de fabricação/modelo</div>
+                    <div class="tablecel">{ano_fabricacao}/{ano_modelo}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Km rodados</div>
+                    <div class="tablecel">{kilometragem}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Combustível</div>
+                    <div class="tablecel">{combustivel}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Câmbio</div>
+                    <div class="tablecel">{cambio}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Placa do veículo</div>
+                    <div class="tablecel">{placa}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Quantidade de portas</div>
+                    <div class="tablecel">{portas}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Opcionais</div>
+                    <div class="tablecel">{especificacoes}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Tipo do veículo</div>
+                    <div class="tablecel">{tipo}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Cor</div>
+                    <div class="tablecel">{cor}</div>
+                </div>
+                <div class="tablerow">
+                    <div class="tablecel">Mais informações</div>
+                    <div class="tablecel">{maisinformacoes}</div>
+                </div>
+            </div>
+            <br clear="all" />
+        </div>
+    </div>
+</div>
+<!-- INCLUDE BLOCK : ./tpls/rodape.html -->
+<!-- START BLOCK : form_sucesso -->
+<script type="text/javascript">
+    setTimeout( function () {
+        z1Alert('A sua mensagem foi enviada com sucesso.<br /><br />Muito obrigado!', function () {
+            window.location.assign('{link}');
+        } );
+        } , 100);
+</script>
+<!-- END BLOCK : form_sucesso -->
+<!-- START BLOCK : error -->
+<script type="text/javascript">
+    setTimeout( function () {
+        z1Alert('{msg}');
+        } , 100);
+</script>
+<!-- END BLOCK : error -->

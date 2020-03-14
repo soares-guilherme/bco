@@ -1,0 +1,88 @@
+<div class="BoxRow BoxRestrita" style="margin-bottom:5vh;">
+    <div class="BoxWelcome" class="text">
+    	<p>Bem-vindo(a), {auth_nome}</p>
+    	<div class="BoxGrid-4"><div class="card"><p>Saldo disponível:</p><p class="val">$ {saldo}</p></div></div>
+    	<div class="BoxGrid-4"><div class="card"><p>Total rentabilizado:</p><p class="val">$ {total_rentabilizado}</p></div></div>
+    	<div class="BoxGrid-4"><div class="card"><p>Total sacado:</p><p class="val">$ {total_sacado}</p></div></div>
+    	<div class="BoxGrid-4"><div class="card"><p>Total investido:</p><p class="val">$ {total_investido}</p></div></div>
+    </div>
+    <div class="text">
+		<div class="BoxGrid-2">
+		    <h1 class="title">
+		        &bull; Aportes
+		    </h1>
+			<table width="95%" border="0" cellpadding="10" cellspacing="0" class="TabelaArquivos" align="center">
+				<tr class="head">
+					<td>DATA</td>
+					<td>APORTE</td>
+					<td>SITUAÇÃO</td>
+					<td>RENDA</td>
+				</tr>
+				<!-- START BLOCK : linha_aporte -->
+				<tr>
+					<td>
+                        {data}
+                    </td>
+					<td>
+                        U$ {aporte}
+                    </td>
+					<td>
+                        {situacao}
+                    </td>
+					<td>
+                        U$ {renda}
+                    </td>
+				</tr>
+				<!-- START BLOCK : linha_aporte_bar -->
+				<tr>
+					<td colspan="4">
+                        <div style="background-color: #CCC; width: 100%; overflow:hidden;">
+                        	<div style="height:1.5rem; margin:0.3rem; background-color: #8D1700; width: {percentual_renda}%;"></div>
+                        </div>
+                    </td>
+				</tr>
+				<!-- END BLOCK : linha_aporte_bar -->
+				<!-- END BLOCK : linha_aporte -->
+				<!-- START BLOCK : none_aporte -->
+				<tr>
+					<td colspan="3" align="center">
+                        <i>Você não possui aportes no momento.</i>
+                    </td>
+				</tr>
+				<!-- END BLOCK : none_aporte -->
+			</table>
+		</div>
+		<div class="BoxGrid-2">
+		    <h1 class="title">
+		        &bull; Saques
+		    </h1>
+			<table width="95%" border="0" cellpadding="10" cellspacing="0" class="TabelaArquivos" align="center">
+				<tr class="head">
+					<td>DATA</td>
+					<td>SAQUE</td>
+					<td>SITUAÇÃO</td>
+				</tr>
+				<!-- START BLOCK : linha_saque -->
+				<tr>
+					<td>
+                        {data}
+                    </td>
+					<td>
+                        U$ {saque}
+                    </td>
+					<td>
+                        {situacao}
+                    </td>
+				</tr>
+				<!-- END BLOCK : linha_saque -->
+				<!-- START BLOCK : none_saque -->
+				<tr>
+					<td colspan="3" align="center">
+                        <i>Você não possui saques até o momento.</i>
+                    </td>
+				</tr>
+				<!-- END BLOCK : none_saque -->
+			</table>
+		</div>
+	</div>
+</div>
